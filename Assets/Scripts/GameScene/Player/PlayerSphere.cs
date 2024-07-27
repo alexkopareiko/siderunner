@@ -25,10 +25,10 @@ namespace Game
 
         private void FixedUpdate()
         {
-            if (Player.Instance.PlayerCombat.IsAttacking())
-            {
-                return;
-            }
+            //if (Player.Instance.PlayerCombat.IsAttacking())
+            //{
+            //    return;
+            //}
 
             // Basic input for left/right movement
             //float moveInput = Input.GetAxis("Horizontal");

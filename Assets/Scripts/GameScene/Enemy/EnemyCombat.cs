@@ -50,10 +50,14 @@ namespace Game
 
         private void AttackFromAnimation()
         {
-            _animator.SetTrigger("Attack");
             Debug.Log("enemy attack");
 
             if (_playerComponent == null)
+            {
+                return;
+            }
+
+            if (Vector3.Distance(_playerComponent.transform.position, transform.position) > _detectionRadius / 2) 
             {
                 return;
             }
