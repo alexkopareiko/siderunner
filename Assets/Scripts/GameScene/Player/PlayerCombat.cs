@@ -17,14 +17,12 @@ namespace Game
                 _animator.SetInteger("AttackType", Random.Range(0, 2));
             }
 
-            if (_animator.GetCurrentAnimatorStateInfo(1).IsName("Attack01") || _animator.GetCurrentAnimatorStateInfo(1).IsName("Attack02"))
-            {
-                _axeCollider.enabled = true;
-            }
-            else
-            {
-                _axeCollider.enabled = false;
-            }
+            _axeCollider.enabled = IsAttacking();
+        }
+
+        public bool IsAttacking()
+        {
+            return _animator.GetCurrentAnimatorStateInfo(1).IsName("Attack01") || _animator.GetCurrentAnimatorStateInfo(1).IsName("Attack02");
         }
     }
 }

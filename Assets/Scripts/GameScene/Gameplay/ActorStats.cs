@@ -63,6 +63,8 @@ namespace Game
 
             Health -= damage;
 
+            Debug.Log(gameObject.name + "ouch");
+
             if (_health <= 0)
             {
                 Die();
@@ -76,6 +78,8 @@ namespace Game
         {
             _health = 0;
             _animator.SetTrigger("Die");
+            Debug.Log(gameObject.name + "die");
+
         }
 
         protected virtual float Health
