@@ -10,6 +10,8 @@ namespace Game
 
         [SerializeField] private PlayerSphere _playerSphere;
 
+        public PlayerSphere PlayerSphere => _playerSphere;
+
         private void Start()
         {
             _rb = GetComponent<Rigidbody>();

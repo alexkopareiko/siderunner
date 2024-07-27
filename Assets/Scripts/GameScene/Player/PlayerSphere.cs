@@ -16,6 +16,7 @@ namespace Game
 
         public Vector3 GroundNormal => _groundNormal;
         public Vector3 GroundPosition => _groundPosition;
+        public Rigidbody Rigidbody => _rb;
 
         private void Start()
         {

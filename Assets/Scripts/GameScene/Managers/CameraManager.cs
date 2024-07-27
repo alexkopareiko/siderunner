@@ -12,6 +12,7 @@ namespace Game
         [SerializeField] private Camera _mainCamera;
 
         private Vector3 _playerShift;
+        private float _initialFieldOfView;
 
         public Camera MainCamera => _mainCamera;
 
@@ -26,6 +27,7 @@ namespace Game
             {
                 _playerShift = transform.position - Player.Instance.transform.position;
             }
+            _initialFieldOfView = _mainCamera.fieldOfView;
         }
 
         private void SetupInstance()
@@ -44,6 +46,17 @@ namespace Game
             if (Player.Instance != null)
             {
                 transform.position = Vector3.Lerp(transform.position, Player.Instance.transform.position + _playerShift, Time.deltaTime * 1f);
+            }
+
+            SetFieldOfViewDependingOnPlayerSpeed();
+        }
+
+        private void SetFieldOfViewDependingOnPlayerSpeed()
+        {
+            if (Player.Instance != null)
+            {
+                float sphereMagnitude = Player.Instance.PlayerMovement.PlayerSphere.Rigidbody.velocity.magnitude;
+                _mainCamera.fieldOfView = Mathf.Lerp(_mainCamera.fieldOfView, _initialFieldOfView + sphereMagnitude * 3f, Time.deltaTime * 1f);
             }
         }
     }

@@ -1912,7 +1912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5270dabaa8a5cb4380e98caa46e34da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 1
+  _moveSpeed: 1.2
   _stickForce: 10
 --- !u!1 &877190162
 GameObject:
@@ -3325,7 +3325,7 @@ PrefabInstance:
     - target: {fileID: 1802286859466067829, guid: 484a9f23f19a4e72a51c52680233be02,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.008
       objectReference: {fileID: 0}
     - target: {fileID: 1802286859466067829, guid: 484a9f23f19a4e72a51c52680233be02,
         type: 3}
