@@ -19,11 +19,11 @@ namespace Game
                     float damage = Player.Instance.ActorStats.damage;
                     enemy.ActorStats.TakeDamage(damage);
 
-                    Rigidbody rigidbody = collision.gameObject.GetComponent<Rigidbody>();
+                    Rigidbody rigidbody = Helpers.CheckOnComponent<Rigidbody>(collision.gameObject);
                     if (rigidbody != null)
                     {
                         Vector3 directionToEnemy = (collision.transform.position - transform.position).normalized;
-                        rigidbody.AddForce(directionToEnemy * 10f, ForceMode.Impulse);
+                        rigidbody.AddForce(directionToEnemy * 30f, ForceMode.Impulse);
                     }
                 }
             }
