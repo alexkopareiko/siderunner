@@ -63,6 +63,10 @@ namespace Game
             // Apply force to keep character sticking to the surface
             //_rb.AddForce(-_groundNormal * _stickForce);
 
+            Vector3 pos = transform.position;
+            pos.z = 0;
+            transform.position = pos;
+
         }
 
         private void OnCollisionStay(Collision collision)

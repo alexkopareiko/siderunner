@@ -119,7 +119,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _detectionRadius: 2
-  _animator: {fileID: 0}
+  _animator: {fileID: 2724949147050957398}
 --- !u!114 &4894834540263443026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1152,6 +1152,12 @@ MonoBehaviour:
 --- !u!4 &2724949147041871342 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7237178871623097678, guid: 4a102a19a2f846f6ae8e617a0f77a2f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 4737620890175514784}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2724949147050957398 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7237178871632130806, guid: 4a102a19a2f846f6ae8e617a0f77a2f8,
     type: 3}
   m_PrefabInstance: {fileID: 4737620890175514784}
   m_PrefabAsset: {fileID: 0}

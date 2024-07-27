@@ -11,6 +11,7 @@ namespace Game
         [SerializeField] private Animator _animator;
 
         private Player _playerComponent;
+        private ActorStats _actorStats;
 
         private void OnDisable()
         {
@@ -20,6 +21,7 @@ namespace Game
         private void Start()
         {
             _animator = Helpers.CheckOnComponent<Animator>(gameObject);
+            _actorStats = Helpers.CheckOnComponent<ActorStats>(gameObject);
         }
 
         private void Update()
@@ -30,6 +32,11 @@ namespace Game
         private void CheckForNearbyActors()
         {
             if (CheckIfAttackAnimationIsPlaying() || _playerComponent != null)
+            {
+                return;
+            }
+
+            if (_actorStats.health <= 0)
             {
                 return;
             }
