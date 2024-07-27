@@ -10,8 +10,12 @@ namespace Game
         private static Player s_Instance;
 
         [SerializeField] private PlayerMovement _playerMovement;
+        [SerializeField] private PlayerCombat _playerCombat;
+        [SerializeField] private ActorStats _actorStats;
 
         public PlayerMovement PlayerMovement => _playerMovement;
+        public PlayerCombat PlayerCombat => _playerCombat;
+        public ActorStats ActorStats => _actorStats;
 
         private void OnEnable()
         {
