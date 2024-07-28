@@ -7,7 +7,6 @@ namespace Game
     public class PlayerWeapon : MonoBehaviour
     {
         [SerializeField] private LayerMask _actorLayer;
-        [SerializeField] private GameObject _hitPrefab;
 
         private void OnCollisionEnter(Collision collision)
         {
@@ -28,7 +27,9 @@ namespace Game
                         rigidbody.useGravity = true;
                     }
 
-                    Instantiate(_hitPrefab, collision.contacts[0].point, Quaternion.identity);
+                    GameObject hit = PoolManager.Instance.GetObjectFromPool(PoolManager.PoolType.hit1);
+                    hit.transform.position = collision.contacts[0].point;
+                    hit.SetActive(true);
                 }
             }
         }
