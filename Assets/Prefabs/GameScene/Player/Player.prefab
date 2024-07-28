@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 8395521631069397630}
   - component: {fileID: 2397638413288626884}
   - component: {fileID: 6959365046529704925}
-  - component: {fileID: 2702334876140552526}
   - component: {fileID: 5863110315322503321}
+  - component: {fileID: 3294487968072716545}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -100,7 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 625d2f5a9fecf8a489a5a7b8793da550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerSphere: {fileID: 0}
   tmp: 14
 --- !u!114 &6959365046529704925
 MonoBehaviour:
@@ -116,23 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerMovement: {fileID: 2397638413288626884}
   _playerCombat: {fileID: 5863110315322503321}
-  _actorStats: {fileID: 2702334876140552526}
---- !u!114 &2702334876140552526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8014741696278201588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38955e81bafcfd9428a4ae25555b953a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _health: 100
-  _maxHealth: 100
-  _damage: 100
-  _actorType: 0
+  _actorStats: {fileID: 3294487968072716545}
 --- !u!114 &5863110315322503321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,6 +130,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 369231216201720752}
   _axeCollider: {fileID: 8810341150077402344}
+--- !u!114 &3294487968072716545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8014741696278201588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05107514fde8654d98d593cd415bb23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 100
+  _maxHealth: 100
+  _damage: 100
+  _actorType: 0
 --- !u!1001 &2025713337340445473
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -542,8 +541,6 @@ MonoBehaviour:
   _actorLayer:
     serializedVersion: 2
     m_Bits: 64
-  _hitPrefab: {fileID: 7800178691363833420, guid: 29e0a1ddc2f14244dba918782fa6aa88,
-    type: 3}
 --- !u!54 &493117545191287758
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -44,7 +44,7 @@ namespace Game
             SetStats();
         }
 
-        protected void OnDisable()
+        protected virtual void OnDisable()
         {
             StopAllCoroutines();
         }

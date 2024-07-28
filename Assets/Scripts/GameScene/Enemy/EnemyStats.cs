@@ -16,6 +16,7 @@ namespace Game
         {
             base.Die();
             StartCoroutine(DisableMe());
+            GameManager.Instance.AddScore(10);
         }
 
         private IEnumerator DisableMe()
@@ -23,5 +24,12 @@ namespace Game
             yield return new WaitForSeconds(3f);
             gameObject.SetActive(false);
         }
+
+        public override void TakeDamage(float damage, DamageType damageType = DamageType.regular)
+        {
+            base.TakeDamage(damage, damageType);
+            
+        }
+
     }
 }

@@ -44,13 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c9af951922cf234ab1b98391e65081a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockPoolType: 3
-  blockWidth: 1
-  blockHeight: 1
-  minHeight: -1.5
-  maxHeight: 1.5
-  initialBlocks: 10
-  generationOffset: -5
-  player: {fileID: 0}
+  _blockPoolType: 3
+  _blockWidth: 2.6
+  _blockHeight: 1
+  _initialBlocks: 10
+  _generationOffset: -2
   _xInitialOffset: 0
   _yInitialOffset: 0
