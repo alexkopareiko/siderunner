@@ -45,7 +45,6 @@ namespace Game
 
         void GenerateBlock()
         {
-            Debug.Log(blocks.Count);
             Vector3 spawnPosition;
 
             if (blocks.Count == 0)
@@ -59,8 +58,6 @@ namespace Game
                 Vector3 pos = new Vector3(blockPrevPosition.x + 1.25f, blockPrevPosition.y + y, 0);
                 spawnPosition = pos;
             }
-
-            Debug.Log(spawnPosition);
 
             GameObject newBlock = PoolManager.Instance.GetObjectFromPool(blockPoolType);
             newBlock.transform.position = spawnPosition;
