@@ -48,4 +48,6 @@ MonoBehaviour:
   - {fileID: 5837993122826842292, guid: c5dc6b6d453c46c49bf23d6cc0bc465c, type: 3}
   _hitPrefabs:
   - {fileID: -7222641357451162239, guid: 29e0a1ddc2f14244dba918782fa6aa88, type: 3}
+  _blockPrefabs:
+  - {fileID: 5297942112164631643, guid: ba44541af8d2007429dcdd296b56edd8, type: 3}
   _otherPrefabs: {fileID: 0}

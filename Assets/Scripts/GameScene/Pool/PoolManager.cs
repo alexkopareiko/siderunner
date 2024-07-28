@@ -15,6 +15,9 @@ public class PoolManager : MonoBehaviour
     [Header("Hit Prefabs")]
     [SerializeField] private List<PoolPrefab> _hitPrefabs = new();
 
+    [Header("Block Prefabs")]
+    [SerializeField] private List<PoolPrefab> _blockPrefabs = new();
+
     [Header("Other")]
     [SerializeField] private PoolPrefab _otherPrefabs = new();
 
@@ -23,6 +26,14 @@ public class PoolManager : MonoBehaviour
         enemy1 = 1,
 
         hit1 = 2,
+
+        block1 = 3,
+        block2 = 4,
+        block3 = 5,
+        block4 = 6,
+        block5 = 7,
+        block6 = 8,
+
 
     }
 
@@ -47,6 +58,7 @@ public class PoolManager : MonoBehaviour
 
         all.AddRange(_enemyPrefabs);
         all.AddRange(_hitPrefabs);
+        all.AddRange(_blockPrefabs);
         //all.Add(_otherPrefabs);
 
         foreach (PoolPrefab prefab in all)
