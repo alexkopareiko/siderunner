@@ -147,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 100
   _maxHealth: 100
-  _damage: 100
+  _damage: 20
   _actorType: 1
 --- !u!1001 &4737620890175514784
 PrefabInstance:

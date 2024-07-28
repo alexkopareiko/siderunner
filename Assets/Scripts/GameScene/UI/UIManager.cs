@@ -12,6 +12,8 @@ namespace Game
         [Header("Canvases")]
         [SerializeField] private GameObject _playCanvas;
         [SerializeField] private GameObject _dieCanvas;
+        [SerializeField] private GameObject _menuCanvas;
+
 
         private List<GameObject> _canvases = new List<GameObject>();
 
@@ -21,6 +23,7 @@ namespace Game
 
             _canvases.Add(_playCanvas);
             _canvases.Add(_dieCanvas);
+            _canvases.Add(_menuCanvas);
 
             ShowPlayCanvas();
         }
@@ -50,6 +53,11 @@ namespace Game
         public void ShowDieCanvas()
         {
             ShowCanvas(_dieCanvas);
+        }
+
+        public void ShowMenuCanvas()
+        {
+            ShowCanvas(_menuCanvas);
         }
 
     }

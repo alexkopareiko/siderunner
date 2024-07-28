@@ -36,6 +36,11 @@ namespace Game
         {
             _score += score;
             PlayCanvas.Instance.SetScore(_score);
+
+            if (_score > SaveManager.Instance.Score)
+            {
+                SaveManager.Instance.Score = _score;
+            }
         }
 
         public void GameOver()

@@ -52,7 +52,7 @@ namespace Game
             else
             {
                 Vector3 blockPrevPosition = _blocks[_blocks.Count - 1].transform.position;
-                float y = Random.Range(-_blockHeight * 5f, _blockHeight / 2);
+                float y = Random.Range(-_blockHeight * 5f, 0);
                 Vector3 pos = new Vector3(blockPrevPosition.x + 1.25f, blockPrevPosition.y + y, 0);
                 spawnPosition = pos;
             }

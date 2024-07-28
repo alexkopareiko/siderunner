@@ -34,7 +34,7 @@ namespace Game
 
         private void Start()
         {
-
+            _menuButton.onClick.AddListener(OnMenuButtonClicked);
         }
 
         public void SetHealth(float health, float maxHealth)
@@ -46,6 +46,11 @@ namespace Game
         public void SetScore(int score)
         {
             _scoreText.text = score.ToString();
+        }
+
+        private void OnMenuButtonClicked()
+        {
+            UIManager.Instance.ShowMenuCanvas();
         }
     }
 }

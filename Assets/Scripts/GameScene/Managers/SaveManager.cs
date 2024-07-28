@@ -11,6 +11,7 @@ public class SaveManager : MonoBehaviour
     const string k_SoundVolume = "SoundVolume";
     const string k_MusicVolume = "MusicVolume";
     const string k_Vibration = "Vibration";
+    const string k_Score = "Score";
 
 
     private void OnEnable()
@@ -74,4 +75,13 @@ public class SaveManager : MonoBehaviour
     #endregion
 
 
+    #region Score
+
+    public int Score
+    {
+        get => PlayerPrefs.GetInt(k_Score, 0);
+        set => PlayerPrefs.SetInt(k_Score, value);
+    }
+
+    #endregion
 }
