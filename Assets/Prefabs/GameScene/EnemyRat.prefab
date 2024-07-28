@@ -14,13 +14,14 @@ GameObject:
   - component: {fileID: 8515028008169459668}
   - component: {fileID: 7125144254624419498}
   - component: {fileID: 4894834540263443026}
+  - component: {fileID: 5837993122826842292}
   m_Layer: 0
   m_Name: EnemyRat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8924703101468807156
 Transform:
   m_ObjectHideFlags: 0
@@ -102,7 +103,7 @@ MonoBehaviour:
   _health: 100
   _maxHealth: 100
   _damage: 10
-  _actorType: 0
+  _actorType: 1
 --- !u!114 &7125144254624419498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,6 +135,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _actorStats: {fileID: 8515028008169459668}
   _enemyCombat: {fileID: 7125144254624419498}
+--- !u!114 &5837993122826842292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4059796166197941525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 484ad0c5f3ea06746a7b50114ab81ece, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _poolType: 1
+  _poolSize: 10
 --- !u!1001 &4737620890175514784
 PrefabInstance:
   m_ObjectHideFlags: 0

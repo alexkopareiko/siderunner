@@ -6,6 +6,9 @@ namespace Game
 {
     public class PlayerSphere : MonoBehaviour
     {
+        public static PlayerSphere Instance => s_Instance;
+        private static PlayerSphere s_Instance;
+
         public float _moveSpeed = 5f;    // Speed of movement along the surface
         public float _stickForce = 10f;  // Force to keep the character attached to the surface
 
@@ -17,6 +20,22 @@ namespace Game
         public Vector3 GroundNormal => _groundNormal;
         public Vector3 GroundPosition => _groundPosition;
         public Rigidbody Rigidbody => _rb;
+
+        private void OnEnable()
+        {
+            SetupInstance();
+        }
+
+        private void SetupInstance()
+        {
+            if (s_Instance != null && s_Instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            s_Instance = this;
+        }
 
         private void Start()
         {

@@ -55,7 +55,7 @@ namespace Game
         {
             if (Player.Instance != null)
             {
-                float sphereMagnitude = Player.Instance.PlayerMovement.PlayerSphere.Rigidbody.velocity.magnitude;
+                float sphereMagnitude = PlayerSphere.Instance.Rigidbody.velocity.magnitude;
                 _mainCamera.fieldOfView = Mathf.Lerp(_mainCamera.fieldOfView, _initialFieldOfView + sphereMagnitude * 3f, Time.deltaTime * 1f);
             }
         }
