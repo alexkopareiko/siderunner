@@ -41,6 +41,10 @@ namespace Game
         public void GameOver()
         {
             UIManager.Instance.ShowDieCanvas();
+
+            //Rigidbody rigidbody = Helpers.CheckOnComponent<Rigidbody>(Player.Instance.gameObject);
+            //rigidbody.AddForce(Vector3.forward * 30f, ForceMode.Impulse);
+            //rigidbody.useGravity = true;
         }
 
         public void Pause(bool value)

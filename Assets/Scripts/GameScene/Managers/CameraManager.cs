@@ -48,6 +48,11 @@ namespace Game
                 transform.position = Vector3.Lerp(transform.position, Player.Instance.transform.position + _playerShift, Time.deltaTime * 1f);
             }
 
+            if (Player.Instance.ActorStats.health <= 0)
+            {
+                return;
+            }
+
             SetFieldOfViewDependingOnPlayerSpeed();
         }
 

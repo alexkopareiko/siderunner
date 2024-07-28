@@ -64,7 +64,7 @@ namespace Game
             newBlock.name = "Block " + _blocks.Count;
 
             bool shouldSpawnEnemy = Random.Range(0, 100) < 40; // 20% chance to spawn an enemy
-            if (shouldSpawnEnemy)
+            if (_blocks.Count > 5 && shouldSpawnEnemy)
             {
                 GameObject enemy = EnemyGenerator.Instance.SpawnEnemy();
                 enemy.transform.position = new Vector3(spawnPosition.x + _blockWidth / 1.2f, spawnPosition.y + _blockHeight / 2f, 0);

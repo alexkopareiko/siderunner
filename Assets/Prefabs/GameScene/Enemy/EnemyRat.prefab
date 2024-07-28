@@ -21,7 +21,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8924703101468807156
 Transform:
   m_ObjectHideFlags: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
   _actorLayer:
     serializedVersion: 2
     m_Bits: 64
-  _detectionRadius: 2
+  _detectionRadius: 1
   _animator: {fileID: 2724949147050957398}
 --- !u!114 &4894834540263443026
 MonoBehaviour:
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 100
   _maxHealth: 100
-  _damage: 10
+  _damage: 100
   _actorType: 1
 --- !u!1001 &4737620890175514784
 PrefabInstance:

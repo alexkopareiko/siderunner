@@ -711,6 +711,7 @@ GameObject:
   - component: {fileID: 1318500688843707730}
   - component: {fileID: 3700087550023384633}
   - component: {fileID: 2939165158805707501}
+  - component: {fileID: 2106494791815126160}
   m_Layer: 5
   m_Name: DieCanvas
   m_TagString: Untagged
@@ -777,6 +778,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2106494791815126160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5057539696320904570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89082f9ed511adc488912eddb37c0aaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _reloadButton: {fileID: 178581493465387242}
 --- !u!1 &5200679477156461697
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,6 +1378,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 282911776435862928}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &178581493465387242 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114674866867498362, guid: cd1fb1a2ee5105f4aa55010baa181be0,
+    type: 3}
+  m_PrefabInstance: {fileID: 282911776435862928}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7305979225706843636
 PrefabInstance:
   m_ObjectHideFlags: 0

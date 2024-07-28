@@ -44,10 +44,12 @@ namespace Game
 
         private void FixedUpdate()
         {
-            //if (Player.Instance.PlayerCombat.IsAttacking())
-            //{
-            //    return;
-            //}
+            if (Player.Instance.ActorStats.health <= 0)
+            {
+                _rb.velocity = Vector3.zero;
+                _rb.angularVelocity = Vector3.zero;
+                return;
+            }
 
             // Basic input for left/right movement
             //float moveInput = Input.GetAxis("Horizontal");

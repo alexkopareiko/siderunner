@@ -51,19 +51,19 @@ namespace Game
                 if (_playerComponent != null)
                 {
                     _animator.SetTrigger("Attack");
+                    Attack();
                 }
             }
         }
 
-        private void AttackFromAnimation()
+        private void Attack()
         {
-
             if (_playerComponent == null)
             {
                 return;
             }
 
-            if (Vector3.Distance(_playerComponent.transform.position, transform.position) > _detectionRadius ) 
+            if (Vector3.Distance(_playerComponent.transform.position, transform.position) > _detectionRadius * 2f)
             {
                 return;
             }
@@ -73,6 +73,11 @@ namespace Game
             float damage = Helpers.CheckOnComponent<ActorStats>(gameObject).damage;
             actorStats.TakeDamage(damage);
             _playerComponent = null;
+        }
+
+        private void AttackFromAnimation()
+        {
+
         }
 
 
