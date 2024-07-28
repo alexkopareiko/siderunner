@@ -20,10 +20,12 @@ namespace Game
         {
             transform.position = Vector3.Lerp(transform.position, PlayerSphere.Instance.transform.position, Time.deltaTime * 70f);
             //transform.position = _playerSphere.transform.position;
-            transform.up = Vector3.Lerp(transform.up, PlayerSphere.Instance.GroundNormal, Time.deltaTime * tmp);
-            Quaternion rot = transform.rotation;
-            transform.rotation = Quaternion.Euler(0, 0, rot.eulerAngles.z);
-            //transform.up = Vector3.up;
+
+            //transform.up = Vector3.Lerp(transform.up, PlayerSphere.Instance.GroundNormal, Time.deltaTime * tmp);
+            //Quaternion rot = transform.rotation;
+            //transform.rotation = Quaternion.Euler(0, 0, rot.eulerAngles.z);
+
+            transform.up = Vector3.up;
         }
 
     }

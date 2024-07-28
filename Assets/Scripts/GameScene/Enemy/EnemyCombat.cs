@@ -57,17 +57,17 @@ namespace Game
 
         private void AttackFromAnimation()
         {
-            Debug.Log("enemy attack");
 
             if (_playerComponent == null)
             {
                 return;
             }
 
-            if (Vector3.Distance(_playerComponent.transform.position, transform.position) > _detectionRadius / 2) 
+            if (Vector3.Distance(_playerComponent.transform.position, transform.position) > _detectionRadius ) 
             {
                 return;
             }
+            Debug.Log("enemy attack 1");
 
             ActorStats actorStats = _playerComponent.ActorStats;
             float damage = Helpers.CheckOnComponent<ActorStats>(gameObject).damage;

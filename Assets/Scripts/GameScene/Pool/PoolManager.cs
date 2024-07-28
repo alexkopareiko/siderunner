@@ -24,6 +24,15 @@ public class PoolManager : MonoBehaviour
     public enum PoolType
     {
         enemy1 = 1,
+        enemy2 = 9,
+        enemy3 = 10,
+        enemy4 = 11,
+        enemy5 = 12,
+        enemy6 = 13,
+        enemy7 = 14,
+        enemy8 = 15,
+        enemy9 = 16,
+        enemy10 = 17,
 
         hit1 = 2,
 
