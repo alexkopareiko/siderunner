@@ -7,6 +7,7 @@ namespace Game
     public class PlayerWeapon : MonoBehaviour
     {
         [SerializeField] private LayerMask _actorLayer;
+        [SerializeField] private GameObject _hitPrefab;
 
         private void OnCollisionEnter(Collision collision)
         {
@@ -24,7 +25,10 @@ namespace Game
                     {
                         Vector3 directionToEnemy = (collision.transform.position - transform.position).normalized;
                         rigidbody.AddForce(directionToEnemy * 30f, ForceMode.Impulse);
+                        rigidbody.useGravity = true;
                     }
+
+                    Instantiate(_hitPrefab, collision.contacts[0].point, Quaternion.identity);
                 }
             }
         }

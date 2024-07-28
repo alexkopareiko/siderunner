@@ -542,6 +542,8 @@ MonoBehaviour:
   _actorLayer:
     serializedVersion: 2
     m_Bits: 64
+  _hitPrefab: {fileID: 7800178691363833420, guid: 29e0a1ddc2f14244dba918782fa6aa88,
+    type: 3}
 --- !u!54 &493117545191287758
 Rigidbody:
   m_ObjectHideFlags: 0
