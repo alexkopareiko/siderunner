@@ -7,6 +7,8 @@ namespace Game
     public class PlayerWeapon : MonoBehaviour
     {
         [SerializeField] private LayerMask _actorLayer;
+        [SerializeField] private AudioClip _hitEnd;
+
 
         private void OnCollisionEnter(Collision collision)
         {
@@ -30,6 +32,8 @@ namespace Game
                     GameObject hit = PoolManager.Instance.GetObjectFromPool(PoolManager.PoolType.hit1);
                     hit.transform.position = collision.contacts[0].point;
                     hit.SetActive(true);
+
+                    SoundManager.Instance.PlaySoundEffect(_hitEnd);
                 }
             }
         }

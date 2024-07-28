@@ -130,6 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 369231216201720752}
   _axeCollider: {fileID: 8810341150077402344}
+  _hitStart: {fileID: 8300000, guid: 9f34bd3f0e6256b49a380872a91b13d3, type: 3}
 --- !u!114 &3294487968072716545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -541,6 +542,7 @@ MonoBehaviour:
   _actorLayer:
     serializedVersion: 2
     m_Bits: 64
+  _hitEnd: {fileID: 8300000, guid: 9b6f26d274c62eb4fa12be67f84d730e, type: 3}
 --- !u!54 &493117545191287758
 Rigidbody:
   m_ObjectHideFlags: 0

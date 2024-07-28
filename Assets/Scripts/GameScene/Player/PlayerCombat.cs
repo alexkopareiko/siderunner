@@ -8,6 +8,7 @@ namespace Game
     {
         [SerializeField] private Animator _animator;
         [SerializeField] private Collider _axeCollider;
+        [SerializeField] private AudioClip _hitStart;
 
         private void Update()
         {
@@ -15,6 +16,7 @@ namespace Game
             {
                 _animator.SetTrigger("Attack");
                 _animator.SetInteger("AttackType", Random.Range(0, 2));
+                SoundManager.Instance.PlaySoundEffect(_hitStart);
             }
 
             _axeCollider.enabled = IsAttacking();
